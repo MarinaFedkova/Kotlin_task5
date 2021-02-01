@@ -16,7 +16,7 @@ class MainKtTest {
     @Test
     fun update_true() {
         val post1 = Post(id = 11)
-        val post2 = Post(id = 11, text = "newText")
+        val post2 = Post(id = 0, text = "newText")
         WallService.add(post1)
 
         val result = WallService.update(post2)

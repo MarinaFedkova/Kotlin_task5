@@ -3,9 +3,10 @@ object WallService {
     private var postId: Int = 0
 
     fun add(post: Post): Post {
-        posts += post.copy(id = postId + 1)
-        return posts.last()
+        posts += post.copy(id = postId)
         postId++
+        return posts.last()
+
     }
 
     fun update(post: Post): Boolean {
