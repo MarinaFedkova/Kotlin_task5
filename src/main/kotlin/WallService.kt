@@ -1,9 +1,11 @@
 object WallService {
     private var posts = emptyArray<Post>()
+    private var postId: Int = 0
 
     fun add(post: Post): Post {
-        posts += post.copy(id = posts.indexOf(post) + 1)
+        posts += post.copy(id = postId + 1)
         return posts.last()
+        postId++
     }
 
     fun update(post: Post): Boolean {
